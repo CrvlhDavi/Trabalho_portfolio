@@ -1,0 +1,503 @@
+/* Variáveis de cores — tema claro (padrão)*/
+:root {
+    /* Aqui ficam as cores principais do site, para facilitar a troca do visual depois */
+    --fundo: #f4f7fb;
+    --superficie: #ffffff;
+    --texto: #222831;
+    --texto-suave: #5f6c7b;
+    --primario: #2d70ff;
+    --borda: #dce1ea;
+    --destaque: #00e0b0;
+}
+
+/* Reset e base*/
+* {
+    box-sizing: border-box;
+}
+
+html {
+    /* Garante que o menu fixo não cubra o conteúdo ao navegar por âncoras */
+    scroll-padding-top: 90px;
+}
+
+body {
+    margin: 0;
+    font-family: "Inter", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    background: var(--fundo);
+    color: var(--texto);
+    scroll-behavior: smooth;
+}
+
+/* Container principal centralizado */
+.container {
+    /* Esse bloco centraliza o conteúdo e deixa a página com uma aparência mais organizada */
+    max-width: 730px;
+    margin: 40px auto;
+    border: 2px solid var(--borda);
+    border-radius: 24px;
+    background: var(--superficie);
+    box-shadow: 0 20px 48px rgba(0, 0, 0, 0.08);
+    overflow: hidden;
+}
+
+/* Cabeçalho fixo no topo */
+.cabecario {
+    /* O cabeçalho fica preso no topo, então ele acompanha a pessoa enquanto rola a página */
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    background: var(--superficie);
+    border-bottom: 2px solid var(--destaque);
+    padding: 20px 28px;
+    gap: 16px;
+}
+
+/* Nome do portfólio com gradiente de cor */
+.cabecario h1 {
+    font-size: 1.8rem;
+    margin: 0;
+    background: linear-gradient(to right, #22e24c, #76df90, #00b7ff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* Botão de alternância de tema */
+.botao-tema {
+    /* O botão recebe uma borda e uma cor diferente para chamar atenção */
+    border: 2px solid var(--destaque);
+    background: var(--superficie);
+    color: var(--texto);
+    border-radius: 200px;
+    padding: 8px 16px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background 0.2s, color 0.2s;
+}
+
+.botao-tema:hover {
+    background: #032224;
+    color: var(--destaque);
+}
+
+/* Menu de navegação */
+.menu {
+    /* O menu é mostrado em linha, então os links ficam lado a lado de forma simples */
+    list-style: none;
+    padding: 10px 12px;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    border: 2px solid var(--destaque);
+    border-radius: 12px;
+}
+
+.menu li {
+    border: 2px solid var(--destaque);
+    border-radius: 10px;
+    padding: 6px 12px;
+}
+
+.menu a {
+    /* Cada link do menu ganha uma aparência mais destacada e bonita de clicar */
+    display: block;
+    font-size: 0.95rem;
+    font-weight: 600;
+    text-decoration: none;
+    background: linear-gradient(to right, #49b7be, #f1d900, #ff1100);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transition: opacity 0.2s;
+}
+
+.menu a:hover {
+    opacity: 0.75;
+}
+
+/* Destaque visual no link da seção atualmente ativa */
+.menu a.link-ativo {
+    text-decoration: underline;
+    text-decoration-color: var(--destaque);
+    text-underline-offset: 3px;
+}
+
+/* Conteúdo principal — área das seções */
+.conteudo {
+    /* Essa área recebe espaço interno para não ficar muito colada nas bordas */
+    padding: 16px 20px 24px;
+}
+
+/* Offset para o menu fixo não cobrir o título ao rolar */
+section {
+    scroll-margin-top: 110px;
+}
+
+/* 
+   Bloco (cada seção do portfólio)
+*/
+.bloco {
+    /* Cada bloco representa uma parte da página e começa escondido até a seção ser escolhida */
+    display: none;
+    background: var(--superficie);
+    border-radius: 18px;
+    border: 2px solid var(--destaque);
+    padding: 24px;
+    margin-bottom: 20px;
+    box-shadow: 0 8px 24px rgba(0, 161, 135, 0.06);
+}
+
+/* Classe adicionada pelo JavaScript para mostrar a seção */
+.bloco.ativo {
+    /* Quando a seção é selecionada, ela passa a aparecer como um bloco visível */
+    display: block;
+}
+
+/* A classe ativo é usada pelo JavaScript para mostrar apenas a seção escolhida */
+
+/* Títulos das seções com gradiente */
+.bloco h2 {
+    margin-top: 0;
+    text-decoration: line-through;
+    background: linear-gradient(to right, #49b7be, #f1d900, #ff1100);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.bloco h3 {
+    text-decoration: underline;
+    margin-top: 20px;
+}
+
+/* 
+   Seção "Sobre Mim" — grade de listas
+*/
+.sobre-listas {
+    /* As duas listas ficam lado a lado em telas maiores e se organizam melhor em telas pequenas */
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    margin-top: 16px;
+}
+
+/* Lista de habilidades e ferramentas */
+.habilidades {
+    list-style: none;
+    padding: 0;
+    margin: 10px 0 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    gap: 10px;
+}
+
+.habilidades li {
+    background: #f9fbff;
+    color: #575757;
+    padding: 10px 14px;
+    border-radius: 12px;
+    border: 2px solid var(--destaque);
+    text-align: center;
+    transition: background 0.2s, color 0.2s;
+}
+
+.habilidades li:hover {
+    background: #032224;
+    color: var(--destaque);
+    font-weight: bold;
+    text-transform: uppercase;
+    text-shadow: 0 0 4px #00715d;
+}
+
+/* 
+   Seção "Portfólio" — cards de projetos
+ */
+.cards {
+    /* Os projetos são organizados em cartões para ficarem mais fáceis de ler */
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 16px;
+    margin-top: 16px;
+}
+
+.card {
+    /* Cada cartão recebe espaço interno e borda para parecer um bloco separado */
+    padding: 18px;
+    background: #f9fbff;
+    border-radius: 16px;
+    border: 2px solid var(--destaque);
+    transition: background 0.2s, color 0.2s;
+}
+
+.card:hover {
+    background: #032224;
+    color: var(--destaque);
+}
+
+.card h3 {
+    margin-top: 0;
+}
+
+.link-card {
+    /* Esse link é tratado como um bloco pequeno para ficar melhor posicionado dentro do cartão */
+    display: inline-block;
+    margin-top: 12px;
+    color: var(--primario);
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.link-card:hover {
+    text-decoration: underline;
+}
+
+/* 
+   Seção "Formação" — lista de cursos
+ */
+.cursos {
+    list-style: none;
+    padding: 0;
+    margin: 16px 0 0;
+
+}
+
+.cursos li {
+    margin-bottom: 10px;
+    color: var(--texto);
+}
+
+.cursos li img.loading-icon {
+    width: 1.9em;
+    height: 1.9em;
+    vertical-align: middle;
+}
+
+/* Links de certificados — cor visível no tema claro */
+.cursos a {
+    color: #020202;
+    text-decoration: underline;
+}
+
+.cursos a:hover {
+    color: #00715d;
+    text-decoration: line-through;
+    text-shadow: 0 0 4px #00715d;
+    text-transform: uppercase;
+}
+
+/* Seção "Contato" — formulário */
+.preencher {
+    /* Os campos do formulário recebem uma organização mais limpa e uniforme */
+    display: grid;
+    gap: 6px;
+    margin-bottom: 14px;
+}
+
+.preencher label {
+    font-weight: 600;
+    color: var(--texto);
+}
+
+.preencher input,
+.preencher textarea {
+    /* Os campos do formulário ocupam a largura disponível para ficarem alinhados */
+    width: 100%;
+    padding: 12px 14px;
+    border: 2px solid var(--borda);
+    border-radius: 12px;
+    background: #f9fbff;
+    color: var(--texto);
+    font-family: inherit;
+    font-size: 1rem;
+}
+
+.preencher textarea {
+    min-height: 120px;
+    resize: vertical;
+}
+
+/* Botão de envio do formulário */
+.botao-enviar {
+    border: 2px solid var(--destaque);
+    border-radius: 14px;
+    padding: 12px 20px;
+    cursor: pointer;
+    background: var(--destaque);
+    color: #fff;
+    font-weight: 700;
+    font-size: 1rem;
+    transition: opacity 0.2s;
+}
+
+.botao-enviar:hover {
+    opacity: 0.88;
+}
+
+/* Área de aviso (sucesso / erro) do formulário */
+.aviso-formulario {
+    /* Essa área mostra mensagens de sucesso ou erro depois do envio do formulário */
+    margin-top: 12px;
+    padding: 14px 16px;
+    border-radius: 14px;
+    border: 2px solid transparent;
+    min-height: 24px;
+}
+
+.aviso-formulario.sucesso {
+    background: rgba(0, 224, 176, 0.12);
+    border-color: var(--destaque);
+    color: #05664e;
+}
+
+.aviso-formulario.erro {
+    background: rgba(255, 17, 0, 0.1);
+    border-color: #ff1100;
+    color: #8b1f1f;
+}
+
+/* Lista de links diretos de contato (e-mail, telefone) */
+.lista-contato {
+    list-style: none;
+    padding: 0;
+    margin: 16px 0 0;
+}
+
+.lista-contato li {
+    margin-bottom: 8px;
+}
+
+.lista-contato a {
+    color: var(--primario);
+    text-decoration: none;
+}
+
+.lista-contato a:hover {
+    text-decoration: underline;
+}
+
+/* Tema escuro — aplicado ao <body class="escuro"> */
+body.escuro {
+    /* Quando o tema escuro é ativado, as cores mudam para dar mais contraste */
+    background: #121212;
+    color: #f5f5f5;
+}
+
+body.escuro .container {
+    background: #1b1b1b;
+    border-color: #333;
+}
+
+body.escuro .cabecario {
+    background: #1b1b1b;
+    border-color: #00715d;
+}
+
+body.escuro .botao-tema {
+    background: #1b1b1b;
+    color: #f5f5f5;
+}
+
+body.escuro .botao-tema:hover {
+    background: #032224;
+    color: var(--destaque);
+}
+
+body.escuro .bloco {
+    background: #1b1b1b;
+    color: #f5f5f5;
+    border-color: #00715d;
+}
+
+body.escuro .bloco h3 {
+    color: #f5f5f5;
+}
+
+/* Cards no tema escuro */
+body.escuro .card {
+    background: #242424;
+    border-color: #00715d;
+    color: #f5f5f5;
+}
+
+body.escuro .card:hover {
+    background: #032224;
+    color: var(--destaque);
+}
+
+/* Habilidades no tema escuro */
+body.escuro .habilidades li {
+    background: #242424;
+    color: #ccc;
+    border-color: #00715d;
+}
+
+body.escuro .habilidades li:hover {
+    background: #032224;
+    color: var(--destaque);
+    text-shadow: 0 0 4px #00715d;
+}
+
+/* Links de cursos no tema escuro */
+body.escuro .cursos li {
+    color: #ccc;
+}
+
+body.escuro .cursos a {
+    color: var(--destaque);
+}
+
+body.escuro .cursos a:hover {
+    color: #fff;
+    text-shadow: 0 0 4px #fff;
+    text-transform: uppercase;
+    text-decoration: line-through;
+}
+
+/* Formulário no tema escuro */
+body.escuro .preencher input,
+body.escuro .preencher textarea {
+    background: #242424;
+    border-color: #444;
+    color: #f5f5f5;
+}
+
+body.escuro .preencher label {
+    color: #ccc;
+}
+
+body.escuro .botao-enviar {
+    background: var(--destaque);
+    color: #020202;
+    border-color: var(--destaque);
+}
+
+/* Links de contato no tema escuro */
+body.escuro .lista-contato a {
+    color: var(--destaque);
+}
+
+/* Link ativo do menu no tema escuro */
+body.escuro .menu a.link-ativo {
+    text-decoration-color: var(--destaque);
+}
+
+/* Responsividade — telas menores que 640px */
+@media (max-width: 640px) {
+
+    /* Em telas menores, os elementos precisam se ajustar para não ficarem apertados */
+    .cabecario {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .sobre-listas {
+        grid-template-columns: 1fr;
+    }
+
+    .cabecario h1 {
+        font-size: 1.4rem;
+    }
+}

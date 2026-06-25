@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfólio | Davi Carvalho Cruz</title>
+    <!-- <link> Conecta este arquivo HTML ao estilo visual que está em style.css -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- Esse bloco centraliza a página e dá mais organização visual ao conteúdo -->
+    <div class="container">
+        <!-- Cabeçalho fixo com nome, menu de navegação e botão de tema -->
+        <header class="cabecario">
+            <div class="intro">
+                <h1>Davi Carvalho Cruz</h1>
+            </div>
+
+            <!-- Menu principal com links para as partes da página -->
+            <nav class="navegacao" aria-label="Menu principal">
+                <ul class="menu">
+                    <li><a href="#sobre">Sobre Mim</a></li>
+                    <li><a href="#portfolio">Portfólio</a></li>
+                    <li><a href="#formacao">Formação</a></li>
+                    <li><a href="#contato">Contato</a></li>
+                </ul>
+            </nav>
+
+            <!-- <button> Botão que muda a aparência da página para tema claro ou escuro -->
+            <button type="button" class="botao-tema">Tema escuro</button>
+        </header>
+
+        <!-- Aqui começa a parte principal da página, onde ficam as seções do portfólio -->
+        <main class="conteudo">
+
+            <section id="sobre" class="bloco">
+                <h2>Sobre Mim</h2>
+                <p>Me chamo Davi Carvalho Cruz, tenho 24 anos, sou natural de Piracicaba-SP e curso o segundo semestre
+                    de Engenharia de Software na Uninter.</p>
+
+                <p>Meus hobbies incluem estudar lógica de programação com Python, explorar novas tecnologias,
+                    praticar musculação e, sempre que posso, iniciar algum curso voltado à tecnologia, como
+                    desenvolvimento de software e inteligência artificial. Gosto de me manter atualizado sobre as
+                    tendências do mundo da tecnologia e busco sempre aprender e me desenvolver em projetos que
+                    desafiem minhas habilidades e me permitam crescer profissionalmente.</p>
+
+                <p>Estou em busca de uma oportunidade de estágio que me permita aplicar e ampliar meus conhecimentos
+                    em desenvolvimento de software, inteligência artificial e machine learning.</p>
+
+                <p>Tenho participado de projetos acadêmicos e pessoais que envolvem programação em Python, modelagem de
+                    dados e soluções em nuvem. Tenho interesse especial por machine learning, processamento de linguagem
+                    natural e agentes de IA.</p>
+
+                <!-- Agrupa as listas de habilidades e ferramentas -->
+                <div class="sobre-listas">
+                    <div>
+                        <h3>Minhas Stacks</h3>
+                        <ul class="habilidades">
+                            <li>Python</li>
+                            <li>SQL</li>
+                            <li>Azure</li>
+                            <li>Power BI</li>
+                            <li>Git / GitHub</li>
+                            <li>Node.js</li>
+                            <li>IA Generativa</li>
+                        </ul>
+                    </div>
+
+                    <div>
+                        <h3>Ferramentas</h3>
+                        <ul class="habilidades">
+                            <li>Visual Studio Code</li>
+                            <li>PyCharm</li>
+                            <li>Google Colab</li>
+                            <li>Foundry</li>
+                            <li>Microsoft Azure</li>
+                            <li>Power BI Desktop</li>
+                            <li>GitHub</li>
+                            <li>Zed</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Essa parte mostra alguns projetos em formato de cartões, para ficar mais visualmente bonito -->
+            <section id="portfolio" class="bloco">
+                <h2>Portfólio</h2>
+                <p>Veja alguns trabalhos desenvolvidos durante a formação e estudos. Cada projeto possui o objetivo
+                    de aplicar os conhecimentos adquiridos durante as imersões e graduação.</p>
+
+                <!-- Caixa com vários cartões, cada um mostrando um projeto diferente -->
+                <div class="cards">
+                    <article class="card">
+                        <h3>Dashboard em Python</h3>
+                        <p>Criação de dashboard em Python, utilizando bibliotecas como Pandas, Streamlit e Plotly
+                            durante a Imersão
+                            em Dados com Python na Alura.</p>
+                        <a class="link-card" href="https://github.com/CrvlhDavi/Imersao-dados-python-alura"
+                            target="_blank" rel="noreferrer">Ver projeto</a>
+                    </article>
+
+                    <article class="card">
+                        <h3>Gerador de Contatos</h3>
+                        <p>Gerador simples de contatos com funcionalidades de cadastro, edição e exclusão para uso em
+                            terminal.</p>
+                        <a class="link-card" href="https://github.com/CrvlhDavi/Cadastro_contatos" target="_blank"
+                            rel="noreferrer">Ver projeto</a>
+                    </article>
+
+                    <article class="card">
+                        <h3>Landing Page de Jogos</h3>
+                        <p>Landing page de site de jogos, desenvolvida com HTML, CSS, JavaScript e Gemini, criada
+                            durante a Imersão Dev com Google Gemini 10ª Edição.</p>
+                        <a class="link-card" href="https://github.com/CrvlhDavi/Imers-o-dev-Alura" target="_blank"
+                            rel="noreferrer">Ver projeto</a>
+                    </article>
+
+                </div>
+            </section>
+
+            <!-- Aqui ficam os cursos e certificados que mostram as minhas formações acadêmicas  -->
+            <section id="formacao" class="bloco">
+                <h2>Formação</h2>
+                <!-- Lista com os cursos e certificados da formação -->
+                <ul class="cursos">
+                    <li><img src="loading-bar.png" alt="Loading" class="loading-icon">Cursando o segundo semestre de
+                        Engenharia de Software
+                        na Uninter.</li>
+                    <li> <img src="loading-bar.png" alt="Loading" class="loading-icon"> Cursando Implantação de
+                        Inteligência Artificial de
+                        sistemas em Nuvem AI-900 - Senai Mario Dedini
+                    </li>
+                    <li>
+                        <a href="https://cursos.alura.com.br/certificate/a96be622-9231-4c84-b673-a505dec07b89?lang"
+                            target="_blank" rel="noreferrer">Curso de Python Primeiros Passos - Alura</a>
+                    </li>
+                    <li>
+                        <a href="https://cursos.alura.com.br/immersion/certificate/d3ac1a1b-bb87-43c0-b576-f37aa3ce7bc1"
+                            target="_blank" rel="noreferrer">Imersão IA - Alura</a>
+                    </li>
+                    <li>
+                        <a href="https://www.sp.senai.br/consulta-certificado?qrcode=51026171648/15579497"
+                            target="_blank" rel="noreferrer">Curso de Power BI - Senai Henrique Simonsen</a>
+                    </li>
+                    <li>
+                        <a href="https://cursos.alura.com.br/immersion/certificate/5cfff8c4-0923-4624-8e16-95c2f7ef6370?lang"
+                            target="_blank" rel="noreferrer">Imersão Python para Dados - Alura</a>
+                    </li>
+                    <li>
+                        <a href="https://cursos.alura.com.br/immersion/certificate/0cc5cd94-9317-48fd-894b-750c77401c7a?lang"
+                            target="_blank" rel="noreferrer">Imersão Dev. HTML, CSS, JavaScript e IA - Alura</a>
+                    </li>
+                </ul>
+            </section>
+
+            <!-- Esta seção reúne o formulário de contato e os links diretos para entrar em contato comigo -->
+            <section id="contato" class="bloco">
+                <h2>Contato</h2>
+                <p>Preencha o formulário abaixo para entrar em contato ou use os links diretos.</p>
+
+                <!-- Formulário para o usuário preencher e enviar uma mensagem -->
+                <form id="formulario-contato" novalidate>
+                    <div class="preencher">
+                        <label for="nome">Nome</label>
+                        <input id="nome" name="nome" type="text" placeholder="Seu nome" />
+                    </div>
+                    <div class="preencher">
+                        <!-- Label ajuda a identificar o campo para quem estiver preenchendo -->
+                        <label for="email">E-mail</label>
+                        <input id="email" name="email" type="email" placeholder="usuario@dominio.com" />
+                    </div>
+                    <div class="preencher">
+                        <label for="mensagem">Mensagem</label>
+                        <textarea id="mensagem" name="mensagem" placeholder="Escreva sua mensagem"></textarea>
+                    </div>
+                    <button type="submit" class="botao-enviar">Enviar mensagem</button>
+                </form>
+
+                <!-- Área onde a mensagem de sucesso ou erro é exibida pelo JavaScript -->
+                <div id="aviso-formulario" class="aviso-formulario" aria-live="polite"></div>
+
+                <!-- Links diretos de contato -->
+                <ul class="lista-contato">
+                    <li><a href="mailto:contatocarvalhodavi@gmail.com">contatocarvalhodavi@gmail.com</a></li>
+                    <li><a href="https://www.linkedin.com/in/davi-carvalho-57bba03aa/">Linkedin</a></li>
+                </ul>
+            </section>
+
+        </main>
+    </div>
+
+    <!-- O JavaScript é carregado no final para agir depois que o HTML já apareceu -->
+    <script src="script.js"></script>
+</body>
+
+</html>
