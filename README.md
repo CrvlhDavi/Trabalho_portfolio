@@ -22,4 +22,4 @@ Durante a execução deste trabalho, foi possível aprender e praticar:
 - Organização de conteúdo para apresentar informações de forma mais clara.
 
 Este projeto representa uma introdução prática ao desenvolvimento web e ao processo de criar uma presença digital própria.
-Trabalho front-end da disciplina de Aplicação Web e Móveis Uninter, com o objetivo de criar um landing page de portfólio profissional Trabalho_portfolio
+Trabalho front-end da disciplina de Aplicação Web e Móveis Uninter, com o objetivo de criar um landing page de portfólio profissional 
